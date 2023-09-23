@@ -23,9 +23,8 @@ window.onscroll = () => {
           .classList.add("active")
       })
       sec.classList.add('show-animate')
-    }else{
-        sec.classList.remove("show-animate")
     }
+
   })
 
   let header = document.querySelector("header")
@@ -39,57 +38,3 @@ window.onscroll = () => {
 
     footer.classList.add('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight)
 }
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const images = document.querySelectorAll(".image")
-
-//   images.forEach(function (image) {
-//     image.addEventListener("mouseenter", function () {
-//       const vejaMaisText = document.createElement("div")
-//       vejaMaisText.classList.add("veja-mais")
-//       vejaMaisText.textContent = "Veja Mais"
-//       image.parentElement.appendChild(vejaMaisText)
-//     })
-
-//     image.addEventListener("mouseleave", function () {
-//       const vejaMaisText = image.parentElement.querySelector(".veja-mais")
-//       if (vejaMaisText) {
-//         vejaMaisText.remove()
-//       }
-//     })
-//   })
-// })
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  const images = document.querySelectorAll(".image")
-
-  images.forEach(function (image) {
-    let isTouch = false
-
-    image.addEventListener("mouseenter", function () {
-      if (!isTouch) {
-        const vejaMaisText = document.createElement("div")
-        vejaMaisText.classList.add("veja-mais")
-        vejaMaisText.textContent = "Veja Mais"
-        image.parentElement.appendChild(vejaMaisText)
-      }
-    })
-
-    image.addEventListener("touchstart", function () {
-      isTouch = true
-
-      const vejaMaisText = document.createElement("div")
-      vejaMaisText.classList.add("veja-mais")
-      vejaMaisText.textContent = "Veja Mais"
-      image.parentElement.appendChild(vejaMaisText)
-    })
-
-    image.addEventListener("mouseleave", function () {
-      const vejaMaisText = image.parentElement.querySelector(".veja-mais")
-      if (vejaMaisText) {
-        vejaMaisText.remove()
-      }
-    })
-  })
-})

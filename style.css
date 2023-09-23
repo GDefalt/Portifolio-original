@@ -284,7 +284,7 @@ section {
   color: var(--main-color);
   z-index: 1;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
 }
 
 .home-sci a::before {
@@ -296,7 +296,7 @@ section {
   height: 100%;
 
   z-index: -1;
-
+  transition: all 0.6s;
 }
 
 .home-sci a:hover {
